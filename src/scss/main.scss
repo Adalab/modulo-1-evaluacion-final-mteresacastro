@@ -12,6 +12,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
 
     &__link{
 
@@ -26,7 +27,56 @@
 }
 
 .section__hero{
-    background-image: url("");
+    background-image: url(../images/cover.jpeg);
+    background-position: 85% 40%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: $hero-text-color;
+    background-size: 15% 10% cover;
+    gap:1.5rem;
     
+
+
+    &--h1{
+        font-family: $second-font;
+        font-weight: 700; 
+        text-transform: uppercase;
+        font-size: 3rem;
+        line-height: 5rem;
+        
+    }
+
+    &--p{
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-left: 3.42rem;
+        margin-right: 3rem;
+
+
+
+    }
+    
+    &--divimg{
+        background-color: $hero-text-color;
+        width: 3.82rem;
+        height: 3.82rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6.12rem;
+        
+        &--img{
+          
+        }
+    }
 
 }
