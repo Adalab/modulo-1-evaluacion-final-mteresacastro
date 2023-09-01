@@ -31,18 +31,17 @@
     background-position: 85% 40%;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     color: $hero-text-color;
-    background-size: 15% 10% cover;
+    background-size: cover;
     gap:1.5rem;
+    position: relative;
     
-
-
     &--h1{
         font-family: $second-font;
         font-weight: 700; 
@@ -58,10 +57,7 @@
         font-size: 1.6rem;
         line-height: 1.9rem;
         margin-left: 3.42rem;
-        margin-right: 3rem;
-
-
-
+        margin-right: 4.25rem;
     }
     
     &--divimg{
@@ -73,10 +69,142 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 6.12rem;
-        
-        &--img{
-          
-        }
+    }
+}
+
+.section__store{
+    background-color: $hero-text-color;
+    margin-left: 1.3rem;
+    margin-right: 1.7rem;
+    margin-top: 3rem;
+
+    &--h3{
+        font-family: $font-main;
+        font-weight: 400;
+        color: $decor-color;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        line-height: 3rem;
     }
 
+    &--h2{
+        font-family: $second-font;
+        font-weight: 700;
+        color: $title-color;
+        text-transform: uppercase;
+        font-size: 2.2rem;
+        line-height: 30px;
+    }
+
+    &--p{
+        font-family: $font-main;
+        font-weight: 400;
+        color: $text-color;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        line-height: 3rem;
+    }
+
+    &--butom{
+        font-family: $font-main;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 4.5rem;
+        text-align: center;
+        background-color: $hero-text-color;
+        color: $decor-color;
+        border: 2px solid $decor-color;
+        border-radius: 22.5px;
+        width: 16rem;
+        height: 4.5rem;
+        vertical-align: center;
+        margin-top: 5.2rem;
+        margin-bottom: 2.8rem;
+    }
+}
+
+.section__school{
+    background-color: $bg-color;
+    font-family: $second-font;
+    font-weight: 700;
+    padding-top: 1.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.1rem;
+    text-align: center;
+    line-height: 3rem;
+
+    &--h3{
+        font-size: 1.2rem;
+        color: #626262;
+    }
+    
+    &--h2{
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding-bottom: 1.14rem;
+    }
+}     
+    
+.div__article{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.5rem;
+
+    &--img{
+        width: 11.4rem;
+        height: 12.4rem;
+        border-radius: 50%;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        transform: translateY(7.5%);  
+    }
+      
+    &--p{
+        font-size: 1.4rem;
+        padding-top: -1rem;
+    }
+
+    &--buton2{
+        color: $hero-text-color;
+        font-family: $font-main;
+        font-size: 2rem;
+        font-weight: 500;
+        width: 18.4rem;
+        background-color: $decor-color;
+        border-radius: 22.5px;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 3.07rem;
+    }
+}
+
+.footer{
+    height: 43.3rem;
+    background-color: $text-color;
+    font-family: $font-main;
+    font-weight: 400;
+    color: $hero-text-color;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3rem;
+
+    &__div{
+        background-color: $hero-text-color;
+        width: 4.5rem;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__icon{
+        padding: 0.4rem;
+        text-align: center;
+        align-items: center;
+        transform: translateY(15%);
+    
+    }
 }
