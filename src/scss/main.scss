@@ -13,18 +13,13 @@
     top: 0;
     left: 0;
     z-index: 100;
-
-    &__link{
-
-        &--icon¨{
-        background-size: contain;
-        }
-    }
-
     @media all and (min-width: 1280px){
         display:none;
     }
 }
+
+    
+
 
 .section__hero{
     background-image: url(../images/cover.jpeg);
@@ -47,8 +42,7 @@
         font-weight: 700; 
         text-transform: uppercase;
         font-size: 3rem;
-        line-height: 5rem;
-        
+        line-height: 5rem;  
     }
 
     &--p{
@@ -69,6 +63,17 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 6.12rem;
+
+            .a-hero{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .scroll-down{
+                    vertical-align: center;
+                    padding: 0.8rem;
+                }
     }
 }
 
@@ -117,7 +122,6 @@
         border-radius: 22.5px;
         width: 16rem;
         height: 4.5rem;
-        vertical-align: center;
         margin-top: 5.2rem;
         margin-bottom: 2.8rem;
     }
@@ -143,68 +147,96 @@
         text-transform: uppercase;
         padding-bottom: 1.14rem;
     }
+    
+    .div__article{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 0.5rem;
+
+        &--img{
+            width: 11.4rem;
+            height: 12.4rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            transform: translateY(7.5%);  
+        }
+      
+        &--p{
+            font-size: 1.4rem;
+            padding-top: -1rem;
+        }
+
+        &--buton2{
+            color: $hero-text-color;
+            font-family: $font-main;
+            font-size: 2rem;
+            font-weight: 500;
+            width: 18.4rem;
+            background-color: $decor-color;
+            border-radius: 22.5px;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 3.07rem;
+        }
+    }
 }     
     
-.div__article{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 0.5rem;
-
-    &--img{
-        width: 11.4rem;
-        height: 12.4rem;
-        border-radius: 50%;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        transform: translateY(7.5%);  
-    }
-      
-    &--p{
-        font-size: 1.4rem;
-        padding-top: -1rem;
-    }
-
-    &--buton2{
-        color: $hero-text-color;
-        font-family: $font-main;
-        font-size: 2rem;
-        font-weight: 500;
-        width: 18.4rem;
-        background-color: $decor-color;
-        border-radius: 22.5px;
-        align-items: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin-bottom: 3.07rem;
-    }
-}
-
 .footer{
-    height: 43.3rem;
     background-color: $text-color;
     font-family: $font-main;
     font-weight: 400;
+    font-size: 1.6rem;
     color: $hero-text-color;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 3rem;
+    gap: 1.5rem;
+    text-align: center;
+    padding-top: 4.5rem;;
 
     &__div{
         background-color: $hero-text-color;
         width: 4.5rem;
         border-radius: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-150%);
         display: flex;
         justify-content: center;
+        position: absolute;
     }
     
     &__icon{
         padding: 0.4rem;
-        text-align: center;
-        align-items: center;
-        transform: translateY(15%);
-    
+        transform: translateY(17%);
     }
+    
+    &__nav{
+    
+        &--ul-li{
+            list-style: none;
+        
+            .footer__link{
+                text-decoration: none;
+                color: $hero-text-color;
+            }
+        }
+    }
+
+    &__div2{
+        font-size: 1.4rem;
+        text-transform: lowercase;
+        margin-bottom: 3.35rem;
+
+        .heart{
+            font-size: 1.2rem;
+            color: $decor-color;
+            transform: translateY(-20%);
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+        }
+    }
+    
 }
