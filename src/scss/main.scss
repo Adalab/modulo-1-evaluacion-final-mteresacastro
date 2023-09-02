@@ -194,10 +194,6 @@
     text-align: center;
     line-height: 3rem;
 
-    @media all and (min-width:768px){
-    
-    }
-
     &--h3{
         font-size: 1.2rem;
         color: #626262;
@@ -277,7 +273,24 @@
     line-height: 3rem;
     gap: 1.5rem;
     text-align: center;
-    padding-top: 4.5rem;;
+    padding-top: 4.5rem;
+
+    @media all and (min-width:768px){
+        /*display: grid;*/
+        /*grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0% 100%;
+        align-items: start;
+        justify-items: center;
+        position: relative;*/
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        gap: 5rem;
+        text-align: left;
+        align-items: flex-start;
+       
+    }
 
     &__div{
         background-color: $hero-text-color;
@@ -286,7 +299,16 @@
         transform: translateY(-150%);
         display: flex;
         justify-content: center;
-        position: absolute;
+        position: fixed;
+        z-index: 100;
+
+        @media all and (min-width:768px){
+            /*grid-column: 2/3;
+            grid-row: 1/4;*/
+            transform: translate(850%, -150%);
+            align-items: center;
+            position: relative;
+        }
     }
     
     &__icon{
@@ -294,9 +316,9 @@
         transform: translateY(17%);
     }
     
-    &__nav{
-    
-        &--ul-li{
+    .menu1{
+        
+        &__ul{
             list-style: none;
         
             .footer__link{
@@ -304,13 +326,40 @@
                 color: $hero-text-color;
             }
         }
+
+        @media all and (min-width: 768px){
+            /*grid-column: 2/3;
+            grid-row: 2;*/
+            align-items: flex-end;
+            order: 2;
+        } 
+    }
+
+    .menu2{
+
+        &__ul{
+            list-style: none;
+        
+            .footer__link{
+                text-decoration: none;
+                color: $hero-text-color;
+            }
+        }
+
+        @media all and (min-width: 768px){
+            /*grid-column: 3/4;
+            grid-row: 2;*/
+            order: 3;
+            padding-right: 10rem;
+            padding-left: 10rem;
+        } 
     }
 
     &__div2{
         font-size: 1.4rem;
         text-transform: lowercase;
         margin-bottom: 3.35rem;
-
+        
         .heart{
             font-size: 1.2rem;
             color: $decor-color;
@@ -318,6 +367,13 @@
             padding-left: 0.2rem;
             padding-right: 0.2rem;
         }
+        
+        @media all and (min-width:768px){
+            /*grid-column: 1/2;
+            grid-row: 2;*/
+            order: 0;
+            padding-right: 10rem;
+        }
     }
-    
 }
+
