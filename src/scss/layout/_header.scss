@@ -1,0 +1,16 @@
+.header{
+    width: 3.64rem;
+    height: 3.68rem;
+    background-color: $decor-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    @media all and (min-width: 1280px){
+        display:none;
+    }
+}

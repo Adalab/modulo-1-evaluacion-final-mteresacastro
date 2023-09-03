@@ -1,1 +1,85 @@
+.footer{
+    background-color: $text-color;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: $hero-text-color;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 3rem;
+    gap: 1.5rem;
+    text-align: center;
+    padding-top: 4.5rem;
+    margin-top: -4.48rem; /*cuidado aqui, no se porque sale franja blanca -4.48rem*/
+
+    @media all and (min-width:768px){
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 13rem;
+        text-align: left;
+        align-items: flex-start;
+        padding-bottom: 3.4rem;   
+    }
+
+    @media all and (min-width:1280px){
+        gap: 35rem;
+    }
+
+    .menu1{
+        
+        &__ul{
+            list-style: none;
+        
+            .footer__link{
+                text-decoration: none;
+                color: $hero-text-color;
+            }
+        }
+
+        @media all and (min-width: 768px){
+            align-items: flex-end;
+            order: 2;
+        } 
+    }
+
+    .menu2{
+
+        &__ul{
+            list-style: none;
+        
+            .footer__link{
+                text-decoration: none;
+                color: $hero-text-color;
+            }
+        }
+
+        @media all and (min-width: 768px){
+            order: 3;
+            padding-right: 4rem;
+        } 
+    }
+
+    &__div2{
+        font-size: 1.4rem;
+        text-transform: lowercase;
+        margin-bottom: 3.35rem;
+        
+        .heart{
+            font-size: 1.2rem;
+            color: $decor-color;
+            transform: translateY(-20%);
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+        }
+        
+        @media all and (min-width:768px){
+            order: 0;
+        }
+    }
+}
+
 
