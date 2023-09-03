@@ -20,9 +20,6 @@
     }
 }
 
-    
-
-
 .section__hero{
     background-image: url(../images/cover.jpeg);
     background-position: 86%;
@@ -40,7 +37,6 @@
 
    @media all and (min-width: 768px){
         background-position: 62%;
-
     }
     
     &--h1{
@@ -69,9 +65,12 @@
             line-height: 2.8rem;
             width: 32rem;
             }
+            
+        @media all and (min-width: 1280px){
+            width: 56.6rem;
+            }
         }
-    
-    
+
     &--divimg{
         background-color: $hero-text-color;
         width: 3.82rem;
@@ -87,21 +86,23 @@
             height: 4.5rem;
             }
 
-            .a-hero{
-                display:flex;
-                justify-content: center;
-                align-items: center;
-            }
+        .a-hero{
+            display:flex;
+            justify-content: center;
+            align-items: center;
 
-                .scroll-down{
-                    vertical-align: center;
-                    padding: 0.8rem;
-                    @media all and (min-width: 768px){
-                        transform: scale(1.2);
-                        }    
-                }
+        .scroll-down{
+            vertical-align: center;
+            padding: 0.8rem;
+
+            @media all and (min-width: 768px){
+                transform: scale(1.2);
+                }    
+            }
+        }
     }
 }
+
 .section__store{
     background-color: $hero-text-color;
     margin-left: 1.3rem;
@@ -220,13 +221,19 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
 
+        @media all and (min-width:1280px){
+            grid-template-columns: 4fr 1fr 4fr; 
+            margin-left: 8rem;
+            margin-right: 8rem;
+        }
+
         &--img{
             width: 11.4rem;
             height: 12.4rem;
             border-radius: 50%;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-            transform: translateY(7.5%);  
-        }
+            transform: translateY(7.5%);
+            }
       
         &--p{
             font-size: 1.4rem;
@@ -235,7 +242,6 @@
             @media all and (min-width:768px){
                 font-size: 1.8rem;
             }
-
         }
 
         &--buton2{
@@ -258,8 +264,37 @@
             }
         }
     }
-}     
+}
+
+.goup__div{
+        display: flex;
+        background-color: $hero-text-color;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        transform: translate(-50%,-50%);
+        justify-content: center;
+        z-index: 99;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        
+
+        @media all and (min-width:768px){
+            transform: translate(-50%, -50%);
+            align-items: center;
+        }
     
+    .goup__icon{
+        padding: 0.4rem;
+        transform: translateY(20%);
+
+        @media all and (min-width: 768px){
+            transform: translateY(10%);
+        } 
+    }   
+}
+ 
 .footer{
     background-color: $text-color;
     font-family: $font-main;
@@ -270,52 +305,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     line-height: 3rem;
     gap: 1.5rem;
     text-align: center;
     padding-top: 4.5rem;
+    margin-top: -4.48rem; /*cuidado aqui, no se porque sale franja blanca -4.48rem*/
 
     @media all and (min-width:768px){
-        /*display: grid;*/
-        /*grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0% 100%;
-        align-items: start;
-        justify-items: center;
-        position: relative;*/
         display: flex;
         justify-content: center;
         flex-direction: row;
-        width: 100%;
-        gap: 5rem;
+        gap: 13rem;
         text-align: left;
         align-items: flex-start;
-       
+        padding-bottom: 3.4rem;   
     }
 
-    &__div{
-        background-color: $hero-text-color;
-        width: 4.5rem;
-        border-radius: 50%;
-        transform: translateY(-150%);
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        z-index: 100;
+    @media all and (min-width:1280px){
+        gap: 35rem;
+    }
 
-        @media all and (min-width:768px){
-            /*grid-column: 2/3;
-            grid-row: 1/4;*/
-            transform: translate(850%, -150%);
-            align-items: center;
-            position: relative;
-        }
-    }
-    
-    &__icon{
-        padding: 0.4rem;
-        transform: translateY(17%);
-    }
-    
     .menu1{
         
         &__ul{
@@ -328,8 +338,6 @@
         }
 
         @media all and (min-width: 768px){
-            /*grid-column: 2/3;
-            grid-row: 2;*/
             align-items: flex-end;
             order: 2;
         } 
@@ -347,11 +355,8 @@
         }
 
         @media all and (min-width: 768px){
-            /*grid-column: 3/4;
-            grid-row: 2;*/
             order: 3;
-            padding-right: 10rem;
-            padding-left: 10rem;
+            padding-right: 4rem;
         } 
     }
 
@@ -369,10 +374,7 @@
         }
         
         @media all and (min-width:768px){
-            /*grid-column: 1/2;
-            grid-row: 2;*/
             order: 0;
-            padding-right: 10rem;
         }
     }
 }
