@@ -163,7 +163,7 @@
         }
     }
 
-    &--butom{
+    &--button{
         font-family: $font-main;
         font-weight: 500;
         font-size: 2rem;
@@ -177,13 +177,21 @@
         height: 4.5rem;
         margin-top: 5.2rem;
         margin-bottom: 2.8rem;
-
+        transition: all 0.2s ease-in;
+        &:hover{
+            color: $bg-color;
+            border-color: $bg-color;
+            background-color: $decor-color;
+            transform: scale(1.1);
+        }
+          
         @media all and (min-width: 768px){
             margin-top: 2.12rem;
             margin-bottom: 6.14rem;
         }
     }
 }
+
 
 .section__school{
     background-color: $bg-color;
@@ -244,7 +252,7 @@
             }
         }
 
-        &--buton2{
+        &--button2{
             color: $hero-text-color;
             font-family: $font-main;
             font-size: 2rem;
@@ -256,6 +264,12 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
             margin-bottom: 3.07rem;
+            transition: 0.3s;
+            &:hover{
+                background-color: $hero-text-color;
+                color: $decor-color;
+                transform: scale(1.3);
+            }
 
             @media all and (min-width:768px){
                 grid-column-start: 2;
@@ -278,11 +292,29 @@
         position: relative;
         left: 50%;
         top: 50%;
+        animation-name: change;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        @keyframes change {
+        from{transform: translate(-50%, 10%) scale(1);
+            background-color: $hero-text-color;}
+        to{transform: translate(-50%,-60%) scale(1.1);
+            background-color: $text-color;}
+        }
         
 
         @media all and (min-width:768px){
             transform: translate(-50%, -50%);
             align-items: center;
+            animation-name: change;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            @keyframes change {
+            from{transform: translate(-50%, 10%) scale(1);
+                background-color: $hero-text-color;}
+            to{transform: translate(-50%,-80%) scale(1.5);
+                background-color: $text-color;}
+            }
         }
     
     .goup__icon{
