@@ -84,3 +84,51 @@
         }
     }
 }
+
+.goup__div{
+    display: flex;
+    background-color: $hero-text-color;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    animation-name: change;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    @keyframes change {
+    from{transform: translate(-50%, 10%) scale(1);
+        background-color: $hero-text-color;}
+    to{transform: translate(-50%,-40%) scale(1.1);
+        background-color: $text-color;}
+    }
+        
+    @media all and (min-width:768px){
+        transform: translate(-50%, -50%);
+        align-items: center;
+        animation-name: change;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        @keyframes change {
+        from{transform: translate(-50%, 10%) scale(1);
+            background-color: $hero-text-color;}
+        to{transform: translate(-50%,-60%) scale(1.5);
+            background-color: $text-color;}
+        }
+    }
+    
+    .goup__icon{
+        padding: 0.4rem;
+        transform: translateY(20%);
+
+        @media all and (min-width: 768px){
+            transform: translateY(10%);
+        } 
+    }   
+}
+
+
+
